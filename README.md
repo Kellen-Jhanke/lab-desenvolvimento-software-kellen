@@ -5,7 +5,7 @@ Tema do projeto: Aplicativo para revisão de questões de concursos públicos da
 
 
 
-Requisitos Funcionais:
+Requisitos Funcionais:<br>
 RF001: O sistema deve permitir que usuários se cadastrem utilizando e-mail e senha.<br>
 RF002: O sistema deve permitir que apenas usuários autenticados possam utilizar suas funcionalidades.<br>
 RF003: O sistema deve permitir a busca de questões por banca organizadora, cargo, nível de escolaridade e matéria.<br>
@@ -18,7 +18,7 @@ RF009: O sistema deve enviar notificações automáticas para revisão quando o 
 
 
 
-Requisitos Não Funcionais:
+Requisitos Não Funcionais:<br>
 RNF001: O sistema deve estar disponível 24 horas por dia, 7 dias por semana.<br>
 RNF002: O sistema deve ser responsivo, funcionar corretamente em diferentes tamanhos de tela e resoluções.<br>
 RNF003: A geração do simulado não deve levar mais do que 5 segundos (após clicar no botão “gerar”).<br>
