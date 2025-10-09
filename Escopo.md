@@ -10,19 +10,19 @@
 O projeto nasce da dificuldade recorrente de candidatos em organizar estudos, localizar questões por banca/assunto e acompanhar a evolução do desempenho. 
 
 # 3. Objetivos do Projeto
-- Disponibilizar um app Android simples e estável para montar e realizar simulados personalizados por filtros de questões (banca organizadora, nível de escolaridade do cargo).
+- Disponibilizar um app Android simples e estável para montar e realizar simulados personalizados por filtros de questões (banca organizadora, nível de               escolaridade do cargo).
 - Registrar e apresentar desempenho (acertos/erros e histórico básico)
-- Garantir uso intuitivo, mesmo para usuários com pouca experiência técnica.
+- Possibilitar uso intuitivo, mesmo para usuários com pouca experiência técnica.
  
 # 4. Escopo do Projeto
 
 ## Entregáveis:
-- Software de geração de simulado, que permite a resolução de questões, apresenta a resposta correta de cada um e registra o histórico
+- Software de geração de simulado, que permite a resolução de questões, apresenta a resposta correta de cada uma e registra o histórico de resoluções
 - Documentação técnica do software.
  
 ## Requisitos:
 - **Funcionais:**
-  - RF001 Permitir que o usuário selecione os seguintes filtros para gerar os simulados: banca organizadora, nível de escolaridade do cargo e matéria (legislação, informática)
+  - RF001 Permitir que o usuário selecione os seguintes filtros para gerar os simulados: banca organizadora, nível de escolaridade do cargo e matéria (legislação,      informática)
   - RF002 Criação de simulados personalizados com base em filtros e quantidade de questões definidas pelo usuário
   - RF003 O usuário deve responder às questões através do simulado gerado
   - RF004 Exibir a resposta correta após a resolução de cada questão
