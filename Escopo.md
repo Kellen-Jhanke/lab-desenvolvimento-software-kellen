@@ -51,11 +51,3 @@ O projeto nasce da dificuldade recorrente de candidatos em organizar estudos, lo
   - Desenvolvedor (1)
   - Orientador (1)
 
-- **Infraestrutura e Ferramentas:**
-  - Banco de dados: Firebase (Firestore)
-  - Front-end: React Native
-  - Back-end: Node.js
-  - IDE: Visual Studio Code
-  - build/debug/emulador: Android Studio e SDK
-  - Controle de versão : Git e GitHub
-
