@@ -52,6 +52,8 @@ O projeto nasce da dificuldade recorrente de candidatos em organizar estudos, lo
   - Orientador (1)
 
 - **Infraestrutura e Ferramentas:**
-  - Banco de dados: Firebase
-  - Desenvolvimento e emulação de app android: Android Studio e SDK, Node.js, NPM, VS Code (IDE).
+  - Banco de dados: Firebase (Firestore)
+  - Front-end: React Native
+  - Back-end: Node.js
+  - Emulação de app android: Android Studio e SDK
   - Controle de versão : Git e GitHub
