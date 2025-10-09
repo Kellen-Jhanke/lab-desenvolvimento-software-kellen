@@ -26,13 +26,13 @@ O escopo do projeto está documentado no arquivo [Escopo.md](https://github.com/
   * dotENV
   * Celebrate
   * Joi
-  * A ser incluído posteriormente : package.json *
+  * *A ser incluído posteriormente* : package.json 
 
 * Mobile (React Native + TypeScript)
   * Expo
   * React Navigation
   * Expo Constants
-  * A ser incluído posteriormente : package.json *
+  **A ser incluído posteriormente* : package.json *
 
 * Utilitários
   * Protótipo: Figma
@@ -48,7 +48,7 @@ Coisas necessárias para instalar o software e como instalar.
 # 7. Instalação
 Exemplos passo-a-passo que informam o que executar para ter um ambiente de desenvolvimento em execução.
 
-A ser incluído posteriormente.
+*A ser incluído posteriormente.*
 
 Funcionalidades e Demonstração da Aplicação
 Funcionalidade 1: descrição da funcionalidade 1
