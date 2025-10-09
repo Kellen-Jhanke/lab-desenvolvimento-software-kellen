@@ -22,17 +22,13 @@ O escopo do projeto está documentado no arquivo [Escopo.md](https://github.com/
 
 * Server (NodeJS + TypeScript)
   * Express
-  * ts-node
-  * dotENV
-  * Celebrate
-  * Joi
   * *A ser incluído posteriormente* : package.json 
 
 * Mobile (React Native + TypeScript)
   * Expo
   * React Navigation
   * Expo Constants
-  **A ser incluído posteriormente* : package.json *
+  * *A ser incluído posteriormente* : package.json *
 
 * Utilitários
   * Protótipo: Figma
