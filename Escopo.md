@@ -22,11 +22,11 @@ O projeto nasce da dificuldade recorrente de candidatos em organizar estudos, lo
  
 ## Requisitos:
 - **Funcionais:**
-  - RF001 Permitir que o usuário selecione os seguintes filtros para gerar os simulados: banca organizadora, nível de escolaridade do cargo e matéria (legislação,      informática)
-  - RF002 Criação de simulados personalizados com base em filtros e quantidade de questões definidas pelo usuário
-  - RF003 O usuário deve responder às questões através do simulado gerado
-  - RF004 Exibir a resposta correta após a resolução de cada questão
-  - RF005 Armazenar o histórico de simulados resolvidos pelo usuário com data, acertos e erros
+  - RF001: Permitir que o usuário selecione os seguintes filtros para gerar os simulados: banca organizadora, nível de escolaridade do cargo e matéria (legislação,     informática)
+  - RF002: Criação de simulados personalizados com base em filtros e quantidade de questões definidas pelo usuário
+  - RF003: O usuário deve responder às questões através do simulado gerado
+  - RF004: Exibir a resposta correta após a resolução de cada questão
+  - RF005: Armazenar o histórico de simulados resolvidos pelo usuário com data, acertos e erros
 
 - **Não Funcionais:**
   - RNF001: O sistema deve estar disponível 24 horas por dia, 7 dias por semana.
