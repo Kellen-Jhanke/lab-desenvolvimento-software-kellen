@@ -86,12 +86,13 @@ Para executar o projeto em ambiente de desenvolvimento, é necessário:
 Exemplos passo-a-passo que informam o que executar para ter um ambiente de desenvolvimento em execução.
 
 ## 7.1 Clonar o repositório
--git clone https://github.com/Kellen-Jhanke/lab-desenvolvimento-software-kellen.git
--cd lab-desenvolvimento-software-kellen/ConcurSim
+- git clone https://github.com/Kellen-Jhanke/lab-desenvolvimento-software-kellen.git
+- cd lab-desenvolvimento-software-kellen/ConcurSim
 
 ## 7.2 Instalar dependências
 No arquivo config/firebaseConfig.jsx, configurar o objeto firebaseConfig com as credenciais do projeto:
 
+```bash
 const firebaseConfig = {
   apiKey: "SUA_API_KEY",
   authDomain: "SEU_DOMINIO.firebaseapp.com",
