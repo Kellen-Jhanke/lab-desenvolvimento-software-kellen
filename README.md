@@ -59,8 +59,7 @@ As principais tecnologias utilizadas no desenvolvimento do ConcurSim são:
 - **Backend como serviço**
   - [Firebase Authentication](https://firebase.google.com/products/auth)
   - [Cloud Firestore](https://firebase.google.com/products/firestore)
-  - [Firebase Admin SDK](https://firebase.google.com/docs/admin)  
-    (utilizado apenas para o script de seed em ambiente local)
+  - [Firebase Admin SDK](https://firebase.google.com/docs/admin)  (utilizado apenas para o script de seed em ambiente local)
 
 - **Ambiente de desenvolvimento**
   - Node.js + npm
