@@ -24,7 +24,7 @@ export default function Home() {
       try {
         setCarregandoSimulados(true);
 
-        // 👇 usa a service em vez de fazer a query na mão
+        // usa a service
         const lista = await buscarSimuladosPorUsuario(user.uid);
 
         setTemSimulados(lista.length > 0);

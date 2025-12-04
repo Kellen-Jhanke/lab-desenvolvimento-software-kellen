@@ -22,7 +22,7 @@ export function useProgressoViewModel() {
     try {
       setLoading(true);
 
-      // 👇 usa a service em vez de acessar o Firestore direto
+      // usa a service 
       const listaSimulados = await buscarSimuladosPorUsuario(user.uid);
 
       if (!listaSimulados.length) {
