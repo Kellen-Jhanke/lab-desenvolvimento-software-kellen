@@ -1,5 +1,3 @@
-README:
-
 # ConcurSim
  
 # 1. Identificação do Projeto 
