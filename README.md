@@ -43,7 +43,7 @@ Disponibilizar um aplicativo Android que auxilie candidatos a concursos público
 - Manter uma interface simples e intuitiva, permitindo o uso mesmo por usuários com pouca experiência técnica.
 
 # 4. Escopo do Projeto
-O escopo do projeto está documentado no arquivo [Escopo.md](https://github.com/Kellen-Jhanke/lab-desenvolvimento-software-kellen/edit/main/Escopo.md)
+O escopo do projeto está documentado no arquivo [Escopo.md](https://github.com/Kellen-Jhanke/lab-desenvolvimento-software-kellen/blob/main/Escopo.md)
 
 # 5. Tecnologias
 
