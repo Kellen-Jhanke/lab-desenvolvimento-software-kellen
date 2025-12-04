@@ -1,9 +1,8 @@
 import { useFocusEffect } from "@react-navigation/native";
-import { collection, getDocs, query, where } from "firebase/firestore";
 import { useCallback, useState } from "react";
 
-import { db } from "../config/firebaseConfig";
 import { useUserDetail } from "../context/UserDetailContext";
+import { buscarSimuladosPorUsuario } from "../services/simuladosService";
 
 export function useProgressoViewModel() {
   const { user, loadingUser } = useUserDetail();
@@ -23,12 +22,10 @@ export function useProgressoViewModel() {
     try {
       setLoading(true);
 
-      const simuladosRef = collection(db, "simulados");
-      const q = query(simuladosRef, where("userId", "==", user.uid));
+      // 👇 usa a service em vez de acessar o Firestore direto
+      const listaSimulados = await buscarSimuladosPorUsuario(user.uid);
 
-      const snap = await getDocs(q);
-
-      if (snap.empty) {
+      if (!listaSimulados.length) {
         setStats([]);
         setUltimosSimulados([]);
         setLoading(false);
@@ -36,22 +33,20 @@ export function useProgressoViewModel() {
       }
 
       const porMateria = {};
-      const listaSimulados = [];
+      const simuladosOrdenaveis = [];
 
-      snap.forEach((docSnap) => {
-        const data = docSnap.data();
-
-        const materiaId = data.materiaId || "sem-materia";
-        const materiaNome = data.materiaNome || materiaId;
-        const score = Number(data.score) || 0;
-        const totalQuestoes = Number(data.totalQuestoes) || 0;
-        const acertos = Number(data.acertos) || 0;
+      listaSimulados.forEach((sim) => {
+        const materiaId = sim.materiaId || "sem-materia";
+        const materiaNome = sim.materiaNome || materiaId;
+        const score = Number(sim.score) || 0;
+        const totalQuestoes = Number(sim.totalQuestoes) || 0;
+        const acertos = Number(sim.acertos) || 0;
 
         let completedAtDate = null;
-        if (data.completedAt && data.completedAt.toDate) {
-          completedAtDate = data.completedAt.toDate();
-        } else if (data.createdAt && data.createdAt.toDate) {
-          completedAtDate = data.createdAt.toDate();
+        if (sim.completedAt && sim.completedAt.toDate) {
+          completedAtDate = sim.completedAt.toDate();
+        } else if (sim.createdAt && sim.createdAt.toDate) {
+          completedAtDate = sim.createdAt.toDate();
         }
 
         if (!porMateria[materiaId]) {
@@ -70,8 +65,8 @@ export function useProgressoViewModel() {
         porMateria[materiaId].totalQuestoes += totalQuestoes;
         porMateria[materiaId].acertos += acertos;
 
-        listaSimulados.push({
-          id: docSnap.id,
+        simuladosOrdenaveis.push({
+          id: sim.id,
           materiaId,
           materiaNome,
           score,
@@ -100,13 +95,13 @@ export function useProgressoViewModel() {
         a.materiaNome.localeCompare(b.materiaNome, "pt-BR")
       );
 
-      listaSimulados.sort((a, b) => {
+      simuladosOrdenaveis.sort((a, b) => {
         const ta = a.completedAt ? a.completedAt.getTime() : 0;
         const tb = b.completedAt ? b.completedAt.getTime() : 0;
         return tb - ta;
       });
 
-      const ultimos = listaSimulados.slice(0, 5);
+      const ultimos = simuladosOrdenaveis.slice(0, 5);
 
       setStats(resultado);
       setUltimosSimulados(ultimos);

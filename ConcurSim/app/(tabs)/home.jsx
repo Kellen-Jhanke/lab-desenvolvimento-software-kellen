@@ -1,4 +1,3 @@
-import { collection, getDocs, limit, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, Image, StyleSheet, Text, View } from "react-native";
 
@@ -6,8 +5,8 @@ import ComSimulado from "../../components/Home/ComSimulado";
 import Header from "../../components/Home/Header";
 import SemSimulado from "../../components/Home/SemSimulado";
 
-import { db } from "../../config/firebaseConfig";
 import { useUserDetail } from "../../context/UserDetailContext";
+import { buscarSimuladosPorUsuario } from "../../services/simuladosService";
 
 export default function Home() {
   const { user, loadingUser } = useUserDetail();
@@ -25,15 +24,10 @@ export default function Home() {
       try {
         setCarregandoSimulados(true);
 
-        const simuladosRef = collection(db, "simulados");
-        const q = query(
-          simuladosRef,
-          where("userId", "==", user.uid),
-          limit(1)
-        );
+        // 👇 usa a service em vez de fazer a query na mão
+        const lista = await buscarSimuladosPorUsuario(user.uid);
 
-        const snap = await getDocs(q);
-        setTemSimulados(!snap.empty);
+        setTemSimulados(lista.length > 0);
       } catch (err) {
         console.log("Erro ao verificar simulados:", err);
         setTemSimulados(false);
@@ -73,11 +67,13 @@ export default function Home() {
       }}
     >
       <Header />
-      <View style={{
-        marginTop: 40,
-        display: "flex",
-        alignItems: "center",
-      }}>
+      <View
+        style={{
+          marginTop: 40,
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Image
           source={require("./../../assets/images/simulado.png")}
           style={{
