@@ -102,6 +102,7 @@ const firebaseConfig = {
   appId: "SEU_APP_ID",
   measurementId: "SEU_MEASUREMENT_ID"
 };
+```
 
 
 ## 7.4 Popular Firestore com matérias e questões
