@@ -1,0 +1,20 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ], 
+      //"@firebase/auth": ["./node_modules/firebase/node_modules/@firebase/auth/dist/index.rn.d.ts"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+, "app/auth/signIn.jsx", "app/index.jsx",  "app/auth/signUp.jsx",  
+  "app/(tabs)/explore.jsx", "app/(tabs)/home.jsx", "app/(tabs)/perfil.jsx", "app/(tabs)/progresso.jsx", "app/simulado.jsx",
+  "config/firebaseConfig.jsx","config/analytics.web.jsx ", "config/analytics.native.jsx" ]
+}
