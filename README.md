@@ -107,16 +107,20 @@ const firebaseConfig = {
 
 ## 7.4 Popular Firestore com matérias e questões
 
--Criar o arquivo serviceAccountKey.json (chave da service account do Firebase) na mesma pasta do seedFirestore.js.
+- Criar o arquivo serviceAccountKey.json (chave da service account do Firebase) na mesma pasta do seedFirestore.js.
 
--Executar o script de seed:
- -node seedFirestore.js
+- Executar o script de seed:
+  ```bash
+     node seedFirestore.js
+  ```
  Isso irá criar/popular as coleções materias e questoes com dados de exemplo para testes.
 
 ## 7.5 Executar o aplicativo
--npx expo start
--Abrir no emulador Android, ou
--Ler o QR Code com o aplicativo Expo Go em um dispositivo físico.
+ ```bash
+    npx expo start
+```
+- Abrir no emulador Android, ou
+- Ler o QR Code com o aplicativo Expo Go em um dispositivo físico.
 
 
 ## 7.6 Funcionalidades e Demonstração da Aplicação
